@@ -69,6 +69,13 @@ final class HandoffTest extends TestCase
         $this->assertStringContainsString('<div data-predoza-feature="sf_another1" data-lang="pl"></div>', $html);
     }
 
+    public function testAttributeValuesAreNeverRunAsBlade(): void
+    {
+        $html = Blade::render('<x-predoza-game feature="sf_x" :title="$title" />', ['title' => '{{ 7 * 7 }}']);
+
+        $this->assertStringContainsString('data-title="{{ 7 * 7 }}"', $html);
+    }
+
     public function testTheDoctorCommandIsRegistered(): void
     {
         $this->assertArrayHasKey('predoza:doctor', $this->app->make(Kernel::class)->all());

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Predoza\Laravel;
 
 use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Predoza\Embed\EmbedSnippet;
@@ -35,8 +36,9 @@ class PredozaServiceProvider extends ServiceProvider
         });
 
         // one per request: embed.js is printed with the first game of a page only
-        $this->app->scoped(EmbedSnippet::class, function (): EmbedSnippet {
-            $handoffPath = config('predoza.handoff_path');
+        $this->app->scoped(EmbedSnippet::class, function (Application $app): EmbedSnippet {
+            // the route's own URL, so an app served from a subdirectory gets the right one
+            $handoffPath = $app->make(Router::class)->has('predoza.handoff') ? route('predoza.handoff', [], false) : config('predoza.handoff_path');
             $loginUrl = config('predoza.login_url');
             $registerUrl = config('predoza.register_url');
 
@@ -52,7 +54,7 @@ class PredozaServiceProvider extends ServiceProvider
     {
         $this->publishes([dirname(__DIR__) . '/config/predoza.php' => config_path('predoza.php')], 'predoza-config');
 
-        if (is_string(config('predoza.handoff_path'))) {
+        if (config('predoza.routes') !== false && is_string(config('predoza.handoff_path'))) {
             $this->loadRoutesFrom(dirname(__DIR__) . '/routes/predoza.php');
         }
 

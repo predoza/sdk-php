@@ -13,8 +13,11 @@ return [
     // the auth guard your members sign in with; null for the default guard
     'guard' => null,
 
-    // the handoff route embed.js calls on your own pages; false to register it yourself
+    // the handoff route embed.js calls on your own pages
     'handoff_path' => '/predoza/handoff',
+
+    // false to register the route yourself; name it predoza.handoff so the game element points at it
+    'routes' => true,
 
     // where "Log in" and "Create an account" in the game send the member
     'login_url' => '/login',

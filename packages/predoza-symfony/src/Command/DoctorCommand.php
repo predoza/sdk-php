@@ -31,7 +31,11 @@ class DoctorCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $host = $this->requestContext->getHost();
-        $pageOrigin = $host === '' || $host === 'localhost' ? null : $this->requestContext->getScheme() . '://' . $host;
+        $scheme = $this->requestContext->getScheme();
+        $port = $scheme === 'https' ? $this->requestContext->getHttpsPort() : $this->requestContext->getHttpPort();
+        $defaultPort = $scheme === 'https' ? 443 : 80;
+        // without framework.router.default_uri the context is localhost, and the page origin check is skipped
+        $pageOrigin = $host === '' || $host === 'localhost' ? null : $scheme . '://' . $host . ($port !== $defaultPort ? ':' . $port : '');
         $handoffUrl = $input->getOption('handoff-url');
         $report = (new Doctor($this->hostSignIn))->run($pageOrigin, is_string($handoffUrl) ? $handoffUrl : null);
 

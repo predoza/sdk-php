@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Predoza\Laravel\View;
 
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\HtmlString;
 use Illuminate\View\Component;
 use Predoza\Embed\EmbedSnippet;
 
@@ -24,8 +26,9 @@ class Game extends Component
     ) {
     }
 
-    public function render(): string
+    // Htmlable, not a string: Laravel compiles a returned string as Blade, which would run attribute values as code
+    public function render(): Htmlable
     {
-        return $this->snippet->render($this->feature, $this->lang ?? App::getLocale(), $this->title, $this->theme, $this->class);
+        return new HtmlString($this->snippet->render($this->feature, $this->lang ?? App::getLocale(), $this->title, $this->theme, $this->class));
     }
 }

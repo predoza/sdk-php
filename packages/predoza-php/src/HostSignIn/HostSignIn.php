@@ -10,7 +10,7 @@ use SensitiveParameter;
 /**
  * Everything your site needs for Predoza host sign-in, built from PREDOZA_SITE_KEY and your MemberDirectory.
  *
- *     $hostSignIn = HostSignIn::create(getenv('PREDOZA_SITE_KEY'), new MyMembers());
+ *     $hostSignIn = HostSignIn::create((string) getenv('PREDOZA_SITE_KEY'), new MyMembers());
  *     $result = $hostSignIn->handoff()->handle($input, $currentUser);
  */
 class HostSignIn

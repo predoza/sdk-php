@@ -17,8 +17,8 @@
     },
     "suggest": {
         "ext-sodium": "Faster sealing; paragonie/sodium_compat is used without it",
-        "psr/http-server-handler": "For Predoza\\HostSignIn\\Bridge\\Psr15\\HandoffHandler",
-        "psr/http-factory": "For Predoza\\HostSignIn\\Bridge\\Psr15\\HandoffHandler",
+        "psr/http-server-handler": "For Predoza\\Bridge\\Psr15\\HandoffHandler",
+        "psr/http-factory": "For Predoza\\Bridge\\Psr15\\HandoffHandler",
         "predoza/predoza-symfony": "Symfony bundle",
         "predoza/predoza-laravel": "Laravel package"
     },
