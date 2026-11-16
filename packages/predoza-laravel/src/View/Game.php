@@ -20,11 +20,12 @@ class Game extends Component
         public ?string $lang = null,
         public ?string $title = null,
         public ?string $theme = null,
+        public ?string $class = null,
     ) {
     }
 
     public function render(): string
     {
-        return $this->snippet->render($this->feature, $this->lang ?? App::getLocale(), $this->title, $this->theme);
+        return $this->snippet->render($this->feature, $this->lang ?? App::getLocale(), $this->title, $this->theme, $this->class);
     }
 }
