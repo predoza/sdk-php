@@ -1,0 +1,37 @@
+{
+    "name": "predoza/predoza-php",
+    "description": "Predoza host sign-in for PHP: sign your site's logged-in members in to embedded Predoza games",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["predoza", "sign-in", "sso", "embed", "games", "ed25519"],
+    "homepage": "https://github.com/predoza/predoza-php",
+    "support": {
+        "issues": "https://github.com/predoza/sdk-php/issues",
+        "source": "https://github.com/predoza/predoza-php"
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-json": "*",
+        "paragonie/sodium_compat": "^2.1",
+        "psr/clock": "^1.0"
+    },
+    "suggest": {
+        "ext-sodium": "Faster sealing; paragonie/sodium_compat is used without it",
+        "psr/http-server-handler": "For Predoza\\HostSignIn\\Bridge\\Psr15\\HandoffHandler",
+        "psr/http-factory": "For Predoza\\HostSignIn\\Bridge\\Psr15\\HandoffHandler",
+        "predoza/predoza-symfony": "Symfony bundle",
+        "predoza/predoza-laravel": "Laravel package"
+    },
+    "autoload": {
+        "psr-4": {
+            "Predoza\\": "src/"
+        }
+    },
+    "bin": ["bin/predoza-doctor"],
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "stable"
+}

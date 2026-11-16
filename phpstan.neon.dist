@@ -1,0 +1,7 @@
+parameters:
+    level: max
+    paths:
+        - packages/predoza-php/src
+        - packages/predoza-symfony/src
+        - packages/predoza-laravel/src
+    tmpDir: .phpstan.cache

@@ -1,0 +1,50 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Predoza\Doctor\Doctor;
+use Predoza\HostSignIn\HostSignIn;
+use Predoza\HostSignIn\InvalidSiteKey;
+use Predoza\HostSignIn\Member;
+use Predoza\HostSignIn\MemberDirectory;
+
+foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/../../../vendor/autoload.php'] as $autoload) {
+    if (is_file($autoload)) {
+        require $autoload;
+
+        break;
+    }
+}
+
+$options = getopt('', ['origin:', 'handoff-url:', 'help']);
+
+if (isset($options['help'])) {
+    fwrite(STDOUT, "Usage: PREDOZA_SITE_KEY=… predoza-doctor [--origin=https://www.example.com] [--handoff-url=https://www.example.com/predoza/handoff]\n");
+    exit(0);
+}
+
+$siteKey = getenv('PREDOZA_SITE_KEY');
+
+if (!is_string($siteKey) || $siteKey === '') {
+    fwrite(STDERR, "PREDOZA_SITE_KEY is not set\n");
+    exit(1);
+}
+
+$nobody = new class () implements MemberDirectory {
+    public function memberFor(object $user): ?Member
+    {
+        return null;
+    }
+};
+
+try {
+    $hostSignIn = HostSignIn::create($siteKey, $nobody);
+} catch (InvalidSiteKey $invalid) {
+    fwrite(STDERR, $invalid->getMessage() . "\n");
+    exit(1);
+}
+
+$report = (new Doctor($hostSignIn))->run($options['origin'] ?? null, $options['handoff-url'] ?? null);
+fwrite(STDOUT, "Predoza host sign-in · predoza/predoza-php\n\n" . implode("\n", $report->lines()) . "\n\n" . $report->summary() . "\n");
+exit($report->passed() ? 0 : 1);

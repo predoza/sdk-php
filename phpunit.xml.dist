@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         cacheDirectory=".phpunit.cache"
+         failOnWarning="true"
+         failOnDeprecation="true"
+         failOnRisky="true">
+    <testsuites>
+        <testsuite name="predoza-php">
+            <directory>packages/predoza-php/tests</directory>
+        </testsuite>
+        <testsuite name="predoza-symfony">
+            <directory>packages/predoza-symfony/tests</directory>
+        </testsuite>
+        <testsuite name="predoza-laravel">
+            <directory>packages/predoza-laravel/tests</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>packages/predoza-php/src</directory>
+            <directory>packages/predoza-symfony/src</directory>
+            <directory>packages/predoza-laravel/src</directory>
+        </include>
+    </source>
+</phpunit>
