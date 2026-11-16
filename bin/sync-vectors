@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
-# Copies the protocol spec and test vectors from a checkout of the Predoza repository (private), which owns them.
+# Copies the test vectors from a checkout of the Predoza repository, which owns them.
 # Usage: bin/sync-vectors ../predoza
 set -euo pipefail
 
-source="${1:?path to the predoza repository}/docs/host-sign-in"
+source="${1:?path to the predoza repository}/docs/host-sign-in/v2-vectors.json"
 root="$(cd "$(dirname "$0")/.." && pwd)"
 
-cp "$source/v2-vectors.json" "$root/spec/host-sign-in-v2-vectors.json"
-cp "$source/v2-vectors.json" "$root/packages/predoza-php/tests/Fixtures/host-sign-in-v2-vectors.json"
-sed -e 's/(v2-vectors.json)/(host-sign-in-v2-vectors.json)/g' -e 's/\[`v2-vectors.json`\]/[`host-sign-in-v2-vectors.json`]/g' \
-    "$source/v2.md" > "$root/spec/host-sign-in-v2.md"
-echo "Synced from $(git -C "$source" rev-parse --short HEAD)"
+cp "$source" "$root/packages/predoza-php/tests/Fixtures/vectors.json"
+echo "Synced from $(git -C "$(dirname "$source")" rev-parse --short HEAD)"

@@ -9,7 +9,7 @@ Symfony bundle for Predoza host sign-in: the handoff route, a Twig function for 
 
 Host sign-in lets your site sign its logged-in members in to embedded Predoza games, so they never log in twice.
 This bundle answers the game's request with a ticket for the user of the current security token. It builds on
-[`predoza/predoza-php`](https://github.com/predoza/predoza-php), whose README explains the protocol, the member
+[`predoza/predoza-php`](https://github.com/predoza/predoza-php), whose README covers the member
 rules and the test helpers.
 
 > This repository is a read-only split of [predoza/sdk-php](https://github.com/predoza/sdk-php). Open issues and

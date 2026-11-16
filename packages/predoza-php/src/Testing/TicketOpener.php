@@ -9,7 +9,7 @@ use Predoza\HostSignIn\Base64Url;
 use Predoza\HostSignIn\SiteKey;
 
 /**
- * Opens tickets the way Predoza does (spec/host-sign-in-v2.md, "Predoza's checks"), for tests only: it needs
+ * Opens tickets the way Predoza does, for tests only: it needs
  * Predoza's secret key, which in production only Predoza has. Single use is not tracked here.
  */
 class TicketOpener

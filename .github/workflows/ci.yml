@@ -45,10 +45,3 @@ jobs:
           coverage: none
       - run: composer update --no-interaction --no-progress
       - run: vendor/bin/phpstan analyse --memory-limit=1G --no-progress
-
-  vectors:
-    name: Vectors in sync
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: cmp spec/host-sign-in-v2-vectors.json packages/predoza-php/tests/Fixtures/host-sign-in-v2-vectors.json

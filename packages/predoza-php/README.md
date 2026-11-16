@@ -7,10 +7,8 @@ Predoza host sign-in for PHP: sign your site's logged-in members in to embedded 
 [![PHP](https://img.shields.io/packagist/php-v/predoza/predoza-php)](https://packagist.org/packages/predoza/predoza-php)
 [![License](https://img.shields.io/packagist/l/predoza/predoza-php)](LICENSE)
 
-The framework-free core of the Predoza PHP SDK. It answers the game's sign-in request with a ticket that holds your
-member's claims, signed with your site key and sealed to Predoza's public key. Predoza opens and checks the ticket
-itself and never calls your site. The protocol is
-[host sign-in v2](https://github.com/predoza/sdk-php/blob/main/spec/host-sign-in-v2.md).
+The framework-free core of the Predoza PHP SDK. It answers the game's sign-in request for your logged-in member,
+prints the game's embed snippet, checks your setup and helps you test your integration.
 
 On Symfony or Laravel, use [`predoza/predoza-symfony`](https://github.com/predoza/predoza-symfony) or
 [`predoza/predoza-laravel`](https://github.com/predoza/predoza-laravel) instead. They build on this package.
@@ -139,7 +137,7 @@ The endpoint checks the request in this order and answers:
 | `415` | The media type is not `application/json` (parameters such as `charset` are allowed). |
 | `400` | The body is not a JSON object with a valid `challenge` (43 base64url characters) and `feature` (1 to 64 of `A-Za-z0-9_-`). |
 | `204` | A guest: `$currentUser` is `null` or your `MemberDirectory` returned `null`. |
-| `200` | A member: `{"ticket": "v2.…"}` with `Content-Type: application/json`. |
+| `200` | A member: `{"ticket": "…"}` with `Content-Type: application/json`. |
 
 Every answer carries `Cache-Control: no-store` and no CORS headers.
 
@@ -392,8 +390,8 @@ The Symfony bundle and the Laravel package take care of these. When you integrat
 
 ## Contributing and security
 
-Issues and pull requests go to [predoza/sdk-php](https://github.com/predoza/sdk-php). Report security problems
-[privately on GitHub](https://github.com/predoza/sdk-php/security/advisories/new), not in a public issue.
+Issues and pull requests go to [predoza/sdk-php](https://github.com/predoza/sdk-php). Report security problems to
+[dev@predoza.com](mailto:dev@predoza.com), not in a public issue.
 
 ## License
 

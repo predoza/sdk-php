@@ -14,7 +14,7 @@ use Predoza\Testing\TicketOpener;
 use Predoza\Testing\TicketRefused;
 
 /**
- * The protocol's test vectors (spec/host-sign-in-v2-vectors.json), which Predoza's own tests run too.
+ * Tickets and requests Predoza's own tests use too, so the SDK and Predoza agree.
  */
 final class VectorsTest extends TestCase
 {
@@ -132,6 +132,6 @@ final class VectorsTest extends TestCase
      */
     private static function vectors(): array
     {
-        return self::$vectors ??= json_decode((string) file_get_contents(__DIR__ . '/Fixtures/host-sign-in-v2-vectors.json'), true, 512, JSON_THROW_ON_ERROR);
+        return self::$vectors ??= json_decode((string) file_get_contents(__DIR__ . '/Fixtures/vectors.json'), true, 512, JSON_THROW_ON_ERROR);
     }
 }

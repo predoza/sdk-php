@@ -7,7 +7,7 @@ namespace Predoza\HostSignIn;
 use Psr\Clock\ClockInterface;
 
 /**
- * Builds protocol v2 tickets: the claims signed with your site key, then sealed to Predoza's public key, so only
+ * Builds tickets: the member's claims signed with your site key, then sealed to Predoza's public key, so only
  * Predoza can read them (page scripts see ciphertext) and only your site can have made them.
  */
 class TicketSealer
