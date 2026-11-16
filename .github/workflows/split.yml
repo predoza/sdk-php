@@ -1,0 +1,49 @@
+name: Split
+
+# Every package directory is published as its own read-only repository, which Packagist reads. A tag here tags all
+# three, so the packages always share a version. SPLIT_TOKEN: a fine-grained token with "Contents: read and write"
+# on predoza/predoza-php, predoza/predoza-symfony and predoza/predoza-laravel.
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: split
+  cancel-in-progress: false
+
+jobs:
+  split:
+    name: ${{ matrix.package.repo }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - { dir: predoza-php, repo: predoza/predoza-php }
+          - { dir: predoza-symfony, repo: predoza/predoza-symfony }
+          - { dir: predoza-laravel, repo: predoza/predoza-laravel }
+    env:
+      SPLIT_TOKEN: ${{ secrets.SPLIT_TOKEN }}
+    steps:
+      - if: env.SPLIT_TOKEN == ''
+        run: echo "::error::SPLIT_TOKEN is not set; the split repositories were not updated" && exit 1
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Split and push
+        env:
+          PREFIX: packages/${{ matrix.package.dir }}
+          REPO: ${{ matrix.package.repo }}
+        run: |
+          sha=$(git subtree split --prefix="$PREFIX")
+          remote="https://x-access-token:${SPLIT_TOKEN}@github.com/${REPO}.git"
+          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            git push "$remote" "$sha:refs/tags/$GITHUB_REF_NAME"
+          else
+            git push "$remote" "$sha:refs/heads/main"
+          fi

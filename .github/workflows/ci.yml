@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: PHP ${{ matrix.php }}${{ matrix.lowest && ' (lowest deps)' || '' }}${{ matrix.without-sodium && ' (no ext-sodium)' || '' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.2', '8.3', '8.4', '8.5']
+        lowest: [false]
+        without-sodium: [false]
+        include:
+          - php: '8.2'
+            lowest: true
+            without-sodium: false
+          - php: '8.3'
+            lowest: false
+            without-sodium: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: ${{ matrix.without-sodium && ':sodium' || 'sodium' }}
+          coverage: none
+      - run: composer update --no-interaction --no-progress ${{ matrix.lowest && '--prefer-lowest' || '' }}
+      - run: vendor/bin/phpunit
+
+  analyse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+      - run: composer update --no-interaction --no-progress
+      - run: vendor/bin/phpstan analyse --memory-limit=1G --no-progress
+
+  vectors:
+    name: Vectors in sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cmp spec/host-sign-in-v2-vectors.json packages/predoza-php/tests/Fixtures/host-sign-in-v2-vectors.json
