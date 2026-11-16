@@ -1,0 +1,38 @@
+{
+    "name": "predoza/predoza-symfony",
+    "description": "Symfony bundle for Predoza host sign-in: the handoff route, a Twig function for embedded games and a doctor command",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "keywords": ["predoza", "symfony", "bundle", "sign-in", "sso", "embed", "games"],
+    "homepage": "https://github.com/predoza/predoza-symfony",
+    "support": {
+        "issues": "https://github.com/predoza/sdk-php/issues",
+        "source": "https://github.com/predoza/predoza-symfony"
+    },
+    "require": {
+        "php": "^8.2",
+        "predoza/predoza-php": "^1.0",
+        "symfony/config": "^6.4 || ^7.4 || ^8.0",
+        "symfony/console": "^6.4 || ^7.4 || ^8.0",
+        "symfony/dependency-injection": "^6.4 || ^7.4 || ^8.0",
+        "symfony/framework-bundle": "^6.4 || ^7.4 || ^8.0",
+        "symfony/http-foundation": "^6.4 || ^7.4 || ^8.0",
+        "symfony/http-kernel": "^6.4 || ^7.4 || ^8.0",
+        "symfony/routing": "^6.4 || ^7.4 || ^8.0"
+    },
+    "suggest": {
+        "symfony/security-bundle": "Signs in the user of the current security token",
+        "symfony/twig-bundle": "For the predoza_game() Twig function"
+    },
+    "autoload": {
+        "psr-4": {
+            "Predoza\\Symfony\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "stable"
+}
