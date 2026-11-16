@@ -3,7 +3,7 @@
 # Usage: bin/sync-vectors ../predoza
 set -euo pipefail
 
-source="${1:?path to the predoza repository}/docs/host-sign-in/v2-vectors.json"
+source="${1:?path to the predoza repository}/docs/host-sign-in/vectors.json"
 root="$(cd "$(dirname "$0")/.." && pwd)"
 
 cp "$source" "$root/packages/predoza-php/tests/Fixtures/vectors.json"

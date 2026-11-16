@@ -14,7 +14,7 @@ use Predoza\HostSignIn\SiteKey;
  */
 class TicketOpener
 {
-    private const FORMAT = '/^v2\.([a-z0-9]{1,16})\.([A-Za-z0-9_-]{100,4096})$/';
+    private const FORMAT = '/^v1\.([a-z0-9]{1,16})\.([A-Za-z0-9_-]{100,4096})$/';
 
     private const MAX_AGE_SECONDS = 90;
 
@@ -97,7 +97,7 @@ class TicketOpener
         $claims = self::claims($json);
         $issuedAt = $claims['iat'] ?? null;
 
-        if (($claims['v'] ?? null) !== 2 || !is_int($issuedAt)) {
+        if (($claims['v'] ?? null) !== 1 || !is_int($issuedAt)) {
             throw new TicketRefused('malformed');
         }
         foreach (['jti' => '/^[A-Za-z0-9_-]{22}$/', 'sk' => '/^[A-Za-z0-9_-]{16}$/', 'sdk' => '#^[a-z0-9-]{1,16}/[0-9A-Za-z.+-]{1,32}$#'] as $key => $pattern) {

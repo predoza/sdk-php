@@ -26,7 +26,7 @@ final class TicketSealerTest extends TestCase
         $ticket = $sealer->seal(new Member('01JD3QW7T0XGZ8F5N2K4M6P9RA', 'Łukasz K', 'pt_BR', 'lukasz@example.com'), $frame->challenge, $frame->feature);
         $claims = $keys->opener()->open($ticket, $frame->feature, $frame->verifier, self::NOW)->claims;
 
-        self::assertSame(2, $claims['v']);
+        self::assertSame(1, $claims['v']);
         self::assertSame('01JD3QW7T0XGZ8F5N2K4M6P9RA', $claims['sub']);
         self::assertSame('Łukasz K', $claims['nickname']);
         self::assertSame('pt_BR', $claims['locale']);

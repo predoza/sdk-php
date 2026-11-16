@@ -55,7 +55,7 @@ class TicketSealer
         $json = json_encode($claims, JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
         $sealed = sodium_crypto_box_seal($this->siteKey->sign($json) . $json, $this->siteKey->predozaPublicKey);
 
-        return 'v2.' . $this->siteKey->predozaKid . '.' . Base64Url::encode($sealed);
+        return 'v1.' . $this->siteKey->predozaKid . '.' . Base64Url::encode($sealed);
     }
 
     /**
@@ -63,6 +63,6 @@ class TicketSealer
      */
     private function baseClaims(): array
     {
-        return ['v' => 2, 'jti' => Base64Url::encode(random_bytes(16)), 'sk' => $this->siteKey->id];
+        return ['v' => 1, 'jti' => Base64Url::encode(random_bytes(16)), 'sk' => $this->siteKey->id];
     }
 }
