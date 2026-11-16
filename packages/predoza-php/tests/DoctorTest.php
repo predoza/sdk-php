@@ -75,7 +75,7 @@ final class DoctorTest extends TestCase
         return new FakeTransport(static function (string $method, string $url, array $headers, string $body) use ($keys, $drift): HttpResponse {
             $opened = $keys->opener()->check(json_decode($body, true)['ticket'], self::NOW);
 
-            return new HttpResponse(200, ['date' => gmdate(Doctor::HTTP_DATE, self::NOW - $drift)], json_encode(['ok' => true, 'client' => 'protipster', 'site_key' => $opened->siteKeyId, 'current' => true]));
+            return new HttpResponse(200, ['date' => gmdate(Doctor::HTTP_DATE, self::NOW - $drift)], json_encode(['ok' => true, 'client' => 'protipster', 'site_key' => $opened->siteKeyId]));
         });
     }
 }

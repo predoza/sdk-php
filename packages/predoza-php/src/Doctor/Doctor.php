@@ -77,10 +77,9 @@ class Doctor
         }
         $answer = json_decode($response->body, true);
         $results = [match (true) {
-            is_array($answer) && ($answer['ok'] ?? false) === true => new CheckResult('Predoza check', ($answer['current'] ?? false) === true ? CheckStatus::Ok : CheckStatus::Warning, sprintf(
-                'ticket opened · client %s · site key %s',
+            is_array($answer) && ($answer['ok'] ?? false) === true => new CheckResult('Predoza check', CheckStatus::Ok, sprintf(
+                'ticket opened · client %s',
                 is_string($answer['client'] ?? null) ? $answer['client'] : '?',
-                ($answer['current'] ?? false) === true ? 'current' : 'replaced: create the env value again from the new key',
             )),
             is_array($answer) && is_string($answer['reason'] ?? null) => new CheckResult('Predoza check', CheckStatus::Failed, "refused: {$answer['reason']}"),
             default => new CheckResult('Predoza check', CheckStatus::Failed, "unexpected answer {$response->status}"),
