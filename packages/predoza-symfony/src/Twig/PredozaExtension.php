@@ -38,7 +38,7 @@ class PredozaExtension extends AbstractExtension
     public function game(string $feature, array $options = []): string
     {
         $request = $this->requestStack->getMainRequest();
-        $snippet = new EmbedSnippet($this->urls->generate('predoza_handoff'), $this->loginUrl, $this->registerUrl, $this->scriptUrl);
+        $snippet = new EmbedSnippet($this->urls->generate('predoza_handoff'), $this->url($this->loginUrl), $this->url($this->registerUrl), $this->scriptUrl);
         $html = $snippet->element($feature, $options['lang'] ?? $request?->getLocale(), $options['title'] ?? null, $options['theme'] ?? null);
 
         if ($request === null || !$request->attributes->getBoolean(self::SCRIPT_PRINTED)) {
@@ -47,5 +47,17 @@ class PredozaExtension extends AbstractExtension
         }
 
         return $html;
+    }
+
+    /**
+     * A path or URL as it is, anything else as a route name (localized routes follow the request's locale).
+     */
+    private function url(?string $pathOrRoute): ?string
+    {
+        if ($pathOrRoute === null || str_starts_with($pathOrRoute, '/') || str_contains($pathOrRoute, '://')) {
+            return $pathOrRoute;
+        }
+
+        return $this->urls->generate($pathOrRoute);
     }
 }

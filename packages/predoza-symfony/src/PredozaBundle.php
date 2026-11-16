@@ -21,7 +21,7 @@ use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
  * predoza:
  *     site_key: '%env(PREDOZA_SITE_KEY)%'
  *     member_directory: App\Predoza\Members      # your Predoza\HostSignIn\MemberDirectory service
- *     login_url: /login
+ *     login_url: app_login                       # a path, a URL or a route name
  *     register_url: /register
  */
 class PredozaBundle extends AbstractBundle
@@ -32,8 +32,8 @@ class PredozaBundle extends AbstractBundle
             ->children()
                 ->scalarNode('site_key')->isRequired()->cannotBeEmpty()->info('PREDOZA_SITE_KEY from your Host sign-in page')->end()
                 ->scalarNode('member_directory')->isRequired()->cannotBeEmpty()->info('Service id of your MemberDirectory')->end()
-                ->scalarNode('login_url')->defaultNull()->info('Where "Log in" in the game sends the member')->end()
-                ->scalarNode('register_url')->defaultNull()->info('Where "Create an account" in the game sends the member')->end()
+                ->scalarNode('login_url')->defaultNull()->info('Where "Log in" in the game sends the member: a path, a URL or a route name')->end()
+                ->scalarNode('register_url')->defaultNull()->info('Where "Create an account" in the game sends the member: a path, a URL or a route name')->end()
                 ->scalarNode('script_url')->defaultValue(EmbedSnippet::SCRIPT_URL)->end()
                 ->scalarNode('check_url')->defaultValue(HostSignIn::CHECK_URL)->end()
             ->end();

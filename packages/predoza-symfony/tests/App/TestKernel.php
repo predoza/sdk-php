@@ -48,7 +48,7 @@ final class TestKernel extends Kernel
             'firewalls' => ['main' => ['lazy' => true, 'provider' => 'users', 'switch_user' => true]],
         ]);
         $container->extension('twig', ['default_path' => __DIR__ . '/templates']);
-        $container->extension('predoza', ['site_key' => self::$siteKey, 'member_directory' => Members::class, 'login_url' => '/login', 'register_url' => '/register']);
+        $container->extension('predoza', ['site_key' => self::$siteKey, 'member_directory' => Members::class, 'login_url' => 'login', 'register_url' => '/register']);
         $container->services()->set(Members::class);
         $container->services()->set('logger', NullLogger::class);
         $container->services()->set(GameController::class)->autowire()->tag('controller.service_arguments')->public();
@@ -58,5 +58,6 @@ final class TestKernel extends Kernel
     {
         $routes->import('@PredozaBundle/config/routes.php');
         $routes->add('game', '/game')->controller(GameController::class);
+        $routes->add('login', '/login')->controller(GameController::class);
     }
 }
