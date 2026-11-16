@@ -25,6 +25,9 @@ final class HandoffTest extends WebTestCase
 
     private FakeFrame $frame;
 
+    /** @var callable|null */
+    private $exceptionHandler;
+
     protected static function getKernelClass(): string
     {
         return TestKernel::class;
@@ -36,8 +39,27 @@ final class HandoffTest extends WebTestCase
         return new TestKernel('test', false);
     }
 
+    protected function tearDown(): void
+    {
+        parent::tearDown();
+
+        // Symfony 6.4.0 registers an exception handler on boot and never removes it
+        while (($handler = self::currentExceptionHandler()) !== null && $handler !== $this->exceptionHandler) {
+            restore_exception_handler();
+        }
+    }
+
+    private static function currentExceptionHandler(): ?callable
+    {
+        $handler = set_exception_handler(null);
+        restore_exception_handler();
+
+        return $handler;
+    }
+
     protected function setUp(): void
     {
+        $this->exceptionHandler = self::currentExceptionHandler();
         $this->keys = TestKeys::create();
         $this->frame = new FakeFrame();
         TestKernel::$siteKey = $this->keys->envValue;
