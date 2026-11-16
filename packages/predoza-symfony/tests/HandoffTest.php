@@ -13,6 +13,7 @@ use Predoza\Testing\TestKeys;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
 use Symfony\Component\Security\Core\Authentication\Token\SwitchUserToken;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
@@ -27,6 +28,12 @@ final class HandoffTest extends WebTestCase
     protected static function getKernelClass(): string
     {
         return TestKernel::class;
+    }
+
+    // no debug: older Symfony versions leave their debug error handler behind, which PHPUnit flags
+    protected static function createKernel(array $options = []): KernelInterface
+    {
+        return new TestKernel('test', false);
     }
 
     protected function setUp(): void
