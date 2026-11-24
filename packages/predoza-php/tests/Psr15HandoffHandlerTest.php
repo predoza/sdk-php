@@ -37,7 +37,7 @@ final class Psr15HandoffHandlerTest extends TestCase
         self::assertSame(200, $response->getStatusCode());
         self::assertSame('no-store', $response->getHeaderLine('Cache-Control'));
         $ticket = json_decode((string) $response->getBody(), true)['ticket'];
-        self::assertSame('48213', $keys->opener()->open($ticket, $frame->feature, $frame->verifier, time())->claims['sub']);
+        self::assertSame('48213', $keys->opener()->open($ticket, $frame->game, $frame->verifier, time())->claims['sub']);
 
         self::assertSame(204, $handler->handle($request->withAttribute('user', null))->getStatusCode());
         self::assertSame(403, $handler->handle($request->withHeader('Origin', 'https://evil.example.net'))->getStatusCode());

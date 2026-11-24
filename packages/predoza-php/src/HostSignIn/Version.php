@@ -6,7 +6,7 @@ namespace Predoza\HostSignIn;
 
 class Version
 {
-    public const VALUE = '1.0.0';
+    public const VALUE = '1.1.0';
 
     public const SDK = 'php/' . self::VALUE;
 }

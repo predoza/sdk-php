@@ -23,8 +23,8 @@ final class TicketSealerTest extends TestCase
         $frame = new FakeFrame();
         $sealer = HostSignIn::create($keys->envValue, new StaticMembers(), new FrozenClock(self::NOW))->sealer();
 
-        $ticket = $sealer->seal(new Member('01JD3QW7T0XGZ8F5N2K4M6P9RA', 'Łukasz K', 'pt_BR', 'lukasz@example.com'), $frame->challenge, $frame->feature);
-        $claims = $keys->opener()->open($ticket, $frame->feature, $frame->verifier, self::NOW)->claims;
+        $ticket = $sealer->seal(new Member('01JD3QW7T0XGZ8F5N2K4M6P9RA', 'Łukasz K', 'pt_BR', 'lukasz@example.com'), $frame->challenge, $frame->game);
+        $claims = $keys->opener()->open($ticket, $frame->game, $frame->verifier, self::NOW)->claims;
 
         self::assertSame(1, $claims['v']);
         self::assertSame('01JD3QW7T0XGZ8F5N2K4M6P9RA', $claims['sub']);
@@ -44,8 +44,8 @@ final class TicketSealerTest extends TestCase
         $sealer = HostSignIn::create($keys->envValue, new StaticMembers())->sealer();
         $member = new Member('48213', 'catenaccio', null, 'cat@example.com');
 
-        $first = $sealer->seal($member, $frame->challenge, $frame->feature);
-        $second = $sealer->seal($member, $frame->challenge, $frame->feature);
+        $first = $sealer->seal($member, $frame->challenge, $frame->game);
+        $second = $sealer->seal($member, $frame->challenge, $frame->game);
 
         self::assertNotSame($first, $second);
         self::assertStringNotContainsString('cat@example.com', base64_decode(strtr(explode('.', $first)[2], '-_', '+/')));
@@ -54,11 +54,11 @@ final class TicketSealerTest extends TestCase
     public function testAnotherSitesKeyIsRefused(): void
     {
         $frame = new FakeFrame();
-        $ticket = HostSignIn::create(TestKeys::create()->envValue, new StaticMembers())->sealer()->seal(new Member('1'), $frame->challenge, $frame->feature);
+        $ticket = HostSignIn::create(TestKeys::create()->envValue, new StaticMembers())->sealer()->seal(new Member('1'), $frame->challenge, $frame->game);
 
         $this->expectException(TicketRefused::class);
 
-        TestKeys::create()->opener()->open($ticket, $frame->feature, $frame->verifier, time());
+        TestKeys::create()->opener()->open($ticket, $frame->game, $frame->verifier, time());
     }
 
     public function testACheckTicketNamesNoMember(): void

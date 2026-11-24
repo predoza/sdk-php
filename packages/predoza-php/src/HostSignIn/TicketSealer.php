@@ -19,7 +19,7 @@ class TicketSealer
     ) {
     }
 
-    public function seal(Member $member, string $challenge, string $feature): string
+    public function seal(Member $member, string $challenge, string $game): string
     {
         return $this->sealClaims([
             ...$this->baseClaims(),
@@ -28,7 +28,7 @@ class TicketSealer
             'locale' => $member->locale,
             'email' => $member->confirmedEmail,
             'challenge' => $challenge,
-            'feature' => $feature,
+            'game' => $game,
             'iat' => $this->clock->now()->getTimestamp(),
             'sdk' => $this->sdk,
         ]);

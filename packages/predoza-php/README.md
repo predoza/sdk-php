@@ -167,7 +167,7 @@ Use one `EmbedSnippet` per page: it adds the game's script once, however many ga
 
 | `render()` argument | Description |
 |---|---|
-| `feature` | Required. The game's id from the Predoza client panel. |
+| `game` | Required. The game's id from the Predoza client panel. |
 | `lang` | Your page's language. The game uses it and hides its own language switcher. |
 | `title` | The game frame's title, for screen readers. |
 | `theme` | `light`, `dark` or `auto`. |
@@ -231,7 +231,7 @@ class PredozaHandoffTest extends TestCase
         $result = $handoff->handle($input, new User(48213, 'catenaccio'));
 
         $ticket = json_decode($result->body, true)['ticket'];
-        $member = $keys->opener()->open($ticket, $frame->feature, $frame->verifier, time())->claims;
+        $member = $keys->opener()->open($ticket, $frame->game, $frame->verifier, time())->claims;
         self::assertSame('48213', $member['sub']);
         self::assertSame(204, $handoff->handle($input, null)->status);
     }

@@ -27,9 +27,9 @@ class EmbedSnippet
      * @param string|null $theme "light", "dark" or "auto"
      * @param string|null $class classes for the game's element on your page
      */
-    public function render(string $feature, ?string $lang = null, ?string $title = null, ?string $theme = null, ?string $class = null): string
+    public function render(string $game, ?string $lang = null, ?string $title = null, ?string $theme = null, ?string $class = null): string
     {
-        $html = $this->element($feature, $lang, $title, $theme, $class);
+        $html = $this->element($game, $lang, $title, $theme, $class);
 
         if (!$this->scriptPrinted) {
             $this->scriptPrinted = true;
@@ -39,11 +39,11 @@ class EmbedSnippet
         return $html;
     }
 
-    public function element(string $feature, ?string $lang = null, ?string $title = null, ?string $theme = null, ?string $class = null): string
+    public function element(string $game, ?string $lang = null, ?string $title = null, ?string $theme = null, ?string $class = null): string
     {
         return '<div' . self::attributes([
             'class' => $class,
-            'data-predoza-feature' => $feature,
+            'data-predoza-game' => $game,
             'data-lang' => $lang,
             'data-title' => $title,
             'data-theme' => $theme,

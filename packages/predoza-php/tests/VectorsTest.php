@@ -36,7 +36,7 @@ final class VectorsTest extends TestCase
     public function testTheOpenerAgreesWithPredoza(array $case): void
     {
         try {
-            $claims = self::opener()->open($case['ticket'], self::vectors()['feature'], $case['verifier'], self::vectors()['now'])->claims;
+            $claims = self::opener()->open($case['ticket'], self::vectors()['game'], $case['verifier'], self::vectors()['now'])->claims;
             $outcome = ['ok' => true, 'claims' => $claims];
         } catch (TicketRefused $refused) {
             $outcome = ['ok' => false, 'reason' => $refused->reason];
@@ -81,7 +81,7 @@ final class VectorsTest extends TestCase
 
         if ($result->status === 200) {
             $ticket = json_decode($result->body, true)['ticket'];
-            $claims = self::opener()->open($ticket, $vectors['feature'], $vectors['pkce']['verifier'], $vectors['now'])->claims;
+            $claims = self::opener()->open($ticket, $vectors['game'], $vectors['pkce']['verifier'], $vectors['now'])->claims;
             self::assertSame('48213', $claims['sub']);
         }
     }

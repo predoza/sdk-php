@@ -13,7 +13,7 @@ class HandoffEndpoint
 {
     private const CHALLENGE = '/^[A-Za-z0-9_-]{43}$/';
 
-    private const FEATURE = '/^[A-Za-z0-9_-]{1,64}$/';
+    private const GAME = '/^[A-Za-z0-9_-]{1,64}$/';
 
     public function __construct(
         private TicketSealer $sealer,
@@ -43,7 +43,7 @@ class HandoffEndpoint
             return EndpointResult::empty(204);
         }
 
-        return EndpointResult::json(200, ['ticket' => $this->sealer->seal($member, $request['challenge'], $request['feature'])]);
+        return EndpointResult::json(200, ['ticket' => $this->sealer->seal($member, $request['challenge'], $request['game'])]);
     }
 
     /**
@@ -67,7 +67,7 @@ class HandoffEndpoint
     }
 
     /**
-     * @return array{challenge: string, feature: string}|null
+     * @return array{challenge: string, game: string}|null
      */
     private function parse(string $rawBody): ?array
     {
@@ -77,12 +77,12 @@ class HandoffEndpoint
             return null;
         }
         $challenge = $body['challenge'] ?? null;
-        $feature = $body['feature'] ?? null;
+        $game = $body['game'] ?? null;
 
-        if (!is_string($challenge) || !preg_match(self::CHALLENGE, $challenge) || !is_string($feature) || !preg_match(self::FEATURE, $feature)) {
+        if (!is_string($challenge) || !preg_match(self::CHALLENGE, $challenge) || !is_string($game) || !preg_match(self::GAME, $game)) {
             return null;
         }
 
-        return ['challenge' => $challenge, 'feature' => $feature];
+        return ['challenge' => $challenge, 'game' => $game];
     }
 }

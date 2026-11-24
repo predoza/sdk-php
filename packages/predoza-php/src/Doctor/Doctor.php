@@ -112,7 +112,7 @@ class Doctor
     {
         $parts = parse_url($handoffUrl);
         $origin = ($parts['scheme'] ?? 'https') . '://' . ($parts['host'] ?? '') . (isset($parts['port']) ? ":{$parts['port']}" : '');
-        $json = json_encode(['challenge' => str_repeat('A', 43), 'feature' => 'doctor'], JSON_THROW_ON_ERROR);
+        $json = json_encode(['challenge' => str_repeat('A', 43), 'game' => 'doctor'], JSON_THROW_ON_ERROR);
 
         try {
             $guest = $this->transport->send('POST', $handoffUrl, ['Content-Type' => 'application/json', 'Origin' => $origin, 'X-Predoza-Handoff' => '1', 'Sec-Fetch-Site' => 'same-origin'], $json);

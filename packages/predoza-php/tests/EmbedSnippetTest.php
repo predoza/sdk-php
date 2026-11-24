@@ -17,20 +17,20 @@ final class EmbedSnippetTest extends TestCase
         $second = $snippet->render('sf_another1');
 
         self::assertSame(
-            "<div data-predoza-feature=\"sf_CDSofyqv\" data-lang=\"pl\"></div>\n<script async src=\"https://play.predoza.com/embed/v1.js\" data-auth-url=\"/predoza/handoff\" data-login-url=\"/login\" data-register-url=\"/register\"></script>",
+            "<div data-predoza-game=\"sf_CDSofyqv\" data-lang=\"pl\"></div>\n<script async src=\"https://play.predoza.com/embed/v1.js\" data-auth-url=\"/predoza/handoff\" data-login-url=\"/login\" data-register-url=\"/register\"></script>",
             $first,
         );
-        self::assertSame('<div data-predoza-feature="sf_another1"></div>', $second);
+        self::assertSame('<div data-predoza-game="sf_another1"></div>', $second);
         self::assertStringNotContainsString('integrity', $first);
     }
 
     public function testTheElementTakesClasses(): void
     {
-        self::assertSame('<div class="predoza-game mt-4" data-predoza-feature="x"></div>', (new EmbedSnippet())->element('x', class: 'predoza-game mt-4'));
+        self::assertSame('<div class="predoza-game mt-4" data-predoza-game="x"></div>', (new EmbedSnippet())->element('x', class: 'predoza-game mt-4'));
     }
 
     public function testValuesAreEscaped(): void
     {
-        self::assertSame('<div data-predoza-feature="x" data-title="&quot;&gt;&lt;script&gt;"></div>', (new EmbedSnippet())->element('x', title: '"><script>'));
+        self::assertSame('<div data-predoza-game="x" data-title="&quot;&gt;&lt;script&gt;"></div>', (new EmbedSnippet())->element('x', title: '"><script>'));
     }
 }

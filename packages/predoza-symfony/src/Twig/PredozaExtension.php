@@ -35,11 +35,11 @@ class PredozaExtension extends AbstractExtension
     /**
      * @param array{lang?: string, title?: string, theme?: string, class?: string} $options
      */
-    public function game(string $feature, array $options = []): string
+    public function game(string $game, array $options = []): string
     {
         $request = $this->requestStack->getMainRequest();
         $snippet = new EmbedSnippet($this->urls->generate('predoza_handoff'), $this->url($this->loginUrl), $this->url($this->registerUrl), $this->scriptUrl);
-        $html = $snippet->element($feature, $options['lang'] ?? $request?->getLocale(), $options['title'] ?? null, $options['theme'] ?? null, $options['class'] ?? null);
+        $html = $snippet->element($game, $options['lang'] ?? $request?->getLocale(), $options['title'] ?? null, $options['theme'] ?? null, $options['class'] ?? null);
 
         if ($request === null || !$request->attributes->getBoolean(self::SCRIPT_PRINTED)) {
             $request?->attributes->set(self::SCRIPT_PRINTED, true);

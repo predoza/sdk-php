@@ -40,7 +40,7 @@ class TicketOpener
     /**
      * @throws TicketRefused
      */
-    public function open(string $ticket, string $feature, string $verifier, int $now): OpenedTicket
+    public function open(string $ticket, string $game, string $verifier, int $now): OpenedTicket
     {
         $opened = $this->unseal($ticket);
         $claims = $opened->claims;
@@ -48,13 +48,13 @@ class TicketOpener
         if (($claims['check'] ?? false) === true) {
             throw new TicketRefused('malformed');
         }
-        foreach (['sub' => '/^[A-Za-z0-9_-]{1,64}$/', 'challenge' => '/^[A-Za-z0-9_-]{43}$/', 'feature' => '/^[A-Za-z0-9_-]{1,64}$/'] as $key => $pattern) {
+        foreach (['sub' => '/^[A-Za-z0-9_-]{1,64}$/', 'challenge' => '/^[A-Za-z0-9_-]{43}$/', 'game' => '/^[A-Za-z0-9_-]{1,64}$/'] as $key => $pattern) {
             if (!is_string($claims[$key] ?? null) || !preg_match($pattern, $claims[$key])) {
                 throw new TicketRefused('malformed');
             }
         }
-        if ($claims['feature'] !== $feature) {
-            throw new TicketRefused('wrong_feature');
+        if ($claims['game'] !== $game) {
+            throw new TicketRefused('wrong_game');
         }
         if (!hash_equals($claims['challenge'], Base64Url::encode(hash('sha256', $verifier, true)))) {
             throw new TicketRefused('verifier_mismatch');

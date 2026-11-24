@@ -73,7 +73,7 @@ final class HandoffTest extends WebTestCase
         $this->handoff($client);
         self::assertResponseStatusCodeSame(200);
         $ticket = json_decode((string) $client->getResponse()->getContent(), true)['ticket'];
-        $claims = $this->keys->opener()->open($ticket, $this->frame->feature, $this->frame->verifier, time())->claims;
+        $claims = $this->keys->opener()->open($ticket, $this->frame->game, $this->frame->verifier, time())->claims;
         self::assertSame(['48213', 'catenaccio'], [$claims['sub'], $claims['nickname']]);
 
         static::ensureKernelShutdown();
@@ -113,7 +113,7 @@ final class HandoffTest extends WebTestCase
 
         self::assertSame(1, substr_count($html, '<script'));
         self::assertStringContainsString('data-auth-url="/predoza/handoff" data-login-url="/login" data-register-url="/register"', $html);
-        self::assertStringContainsString('<div data-predoza-feature="sf_another1" data-lang="pl"></div>', $html);
+        self::assertStringContainsString('<div data-predoza-game="sf_another1" data-lang="pl"></div>', $html);
     }
 
     public function testTheDoctorCommandIsRegistered(): void

@@ -15,7 +15,7 @@ class FakeFrame
 
     public readonly string $challenge;
 
-    public function __construct(public readonly string $feature = 'sf_testgame')
+    public function __construct(public readonly string $game = 'sf_testgame')
     {
         $this->verifier = Base64Url::encode(random_bytes(32));
         $this->challenge = Base64Url::encode(hash('sha256', $this->verifier, true));
@@ -31,6 +31,6 @@ class FakeFrame
 
     public function body(): string
     {
-        return json_encode(['challenge' => $this->challenge, 'feature' => $this->feature], JSON_THROW_ON_ERROR);
+        return json_encode(['challenge' => $this->challenge, 'game' => $this->game], JSON_THROW_ON_ERROR);
     }
 }

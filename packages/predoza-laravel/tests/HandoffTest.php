@@ -30,7 +30,7 @@ final class HandoffTest extends TestCase
         $this->actingAs(new GenericUser(['id' => 48213, 'name' => 'catenaccio']));
 
         $ticket = $this->handoff()->assertOk()->assertHeader('Cache-Control', 'no-store, private')->json('ticket');
-        $claims = $this->keys->opener()->open($ticket, $this->frame->feature, $this->frame->verifier, time())->claims;
+        $claims = $this->keys->opener()->open($ticket, $this->frame->game, $this->frame->verifier, time())->claims;
         $this->assertSame(['48213', 'catenaccio'], [$claims['sub'], $claims['nickname']]);
 
         $this->app['auth']->forgetGuards();
@@ -62,16 +62,16 @@ final class HandoffTest extends TestCase
 
     public function testTheComponentPrintsTheScriptOncePerPage(): void
     {
-        $html = Blade::render('<x-predoza-game feature="sf_CDSofyqv" /> <x-predoza-game feature="sf_another1" lang="pl" />');
+        $html = Blade::render('<x-predoza-game game="sf_CDSofyqv" /> <x-predoza-game game="sf_another1" lang="pl" />');
 
         $this->assertSame(1, substr_count($html, '<script'));
         $this->assertStringContainsString('data-auth-url="/predoza/handoff" data-login-url="/login" data-register-url="/register"', $html);
-        $this->assertStringContainsString('<div data-predoza-feature="sf_another1" data-lang="pl"></div>', $html);
+        $this->assertStringContainsString('<div data-predoza-game="sf_another1" data-lang="pl"></div>', $html);
     }
 
     public function testAttributeValuesAreNeverRunAsBlade(): void
     {
-        $html = Blade::render('<x-predoza-game feature="sf_x" :title="$title" />', ['title' => '{{ 7 * 7 }}']);
+        $html = Blade::render('<x-predoza-game game="sf_x" :title="$title" />', ['title' => '{{ 7 * 7 }}']);
 
         $this->assertStringContainsString('data-title="{{ 7 * 7 }}"', $html);
     }

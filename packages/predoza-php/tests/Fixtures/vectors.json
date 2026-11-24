@@ -1,6 +1,6 @@
 {
     "now": 1763290000,
-    "feature": "sf_vectors",
+    "game": "sf_vectors",
     "page_origin": "https://www.example.com",
     "predoza_keys": [
         {
@@ -22,7 +22,7 @@
     "open": [
         {
             "name": "valid",
-            "ticket": "v1.vec1.9ST8ogAoTRLwMUV51cNp9fhrQfrVRqm70Up42BTE0EgZSSfe6g9_58IEQiddj-ZOB2jsriFKKoyiTtujB_q54BYwhU6mh369CbD8n61pkwXO-pb4jFTqsxZKhI9s0tI5J8MUS-b_XbXzV1z_Q7b_6KVvBwptVp64b-MYeGiCyFsodeCEPYFu99-tqyML7aKB5d9yz50ePwvcv_r3eWdVDWx-z6ulLDzkz4eqwbTReCpHJsFrAd6_bzGyJHJt4JoGlgW6uJjudAFNjRyUqv7Ky99ErRzQo98ELyXgdMyPjym8m9wxzgo2EcA5sF-EcQOOx67l3-0DfrKiq_2X9qADViAxSi8hOK3z96iNFNAUnV5by8Jlk65PtcNjyJMlqPP6b64JeUqQ3DUIsivxGFbnYdmfw27ksmfs5EhkSMn_R34cByRKc0_kboWM6wZcdtC8mEvRV0cG1i76dJ0bmnebb6hjwIfqYk9eQ09OSJa1rP8",
+            "ticket": "v1.vec1.T6E6ZoIlxps7FjT9Mzg_dq4I_05zhB2n7xSbHOpfmQ1Af-3od_oqu2W2yaS_ccLFkOW6QQDDaiQwMXYhFUf0NB6rY25hFnidhXV8fVyzWQz2AeSPCqLi4g2luRZUwe3COBJOCdfFLR5eLd9zPftU3xK7tUL0E8qo-DwoNwnQuxG18nAwC-phMQ6x2pxmL512nGZ1ma2pVbMoNVCvkO8HSkg2RxS6xbo4UkcQqo1QGnhlAFQE9wbWk5S_z4ZQmybnXlhueGbvW1wjV5xJUxpaJAsjWE_2ZGGFwc3xOmKBzkrUBTAx5vjD6W-dV_HYbLuPtNKvxlYCCjQCKz6nfDTVGg3j4djW8ZFXrHRhGqo3-04X3b4kYz2kiPWZbaRMTlFGAjfCTux9GwcPiAHp9Gii1hwFBF8HV_WTxEhbeZhduoeVzYYDwtRIjxeTyIAhFT2tL1zJ0o0SBisHzFmV0B89jfrosT3Mti7cqapGxhU",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": true,
@@ -35,7 +35,7 @@
                     "locale": "pl",
                     "email": "cat@example.com",
                     "challenge": "lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg",
-                    "feature": "sf_vectors",
+                    "game": "sf_vectors",
                     "iat": 1763289995,
                     "sdk": "php/1.0.0"
                 }
@@ -43,7 +43,7 @@
         },
         {
             "name": "oldest accepted (iat = now - 90)",
-            "ticket": "v1.vec1.zD2DuP762eWGyptzkrEGReEPxzdtx1L3RmeqsetfUgFHAbVKQGL97uwqOn5oC_iKQzOvjobu9qsh0aWB7CT7tgirBA_2Ie4wWvl62-qruk861OGZJbq2LmMHmx2kftO_D5ZoRir9FkAFqu2dljjJGpFRY6jD0-uenWOn88tdR9GRb6Vx-U2udmxaOVH9jTmqorLMiY5FeS20yUZm9yokPkukUO6Ntha0rCPI_2cIgBj9EC7W47KWLygEWvFkukyWqOTW77TKCXaLnjU-anuE3zWv5qVVMWQxdWo6MV7y4K_u_O0tkky2fRys58zM_RQs-dmCczSLduNjYp3j6AOJVgIWD9HSWbfaYMDT_ZidbgNuUVcG2auNcv8eN2ydjKWemBPmgJwPDtGFHTH4jwDwlKAMn3BTCpdEtPUpA0EaCYm7UasO0xsVI1530qk6dMKugl9kJB5ZwsktaPctPTsRF_sNu0VZfZGQhTIYoZEw59Y",
+            "ticket": "v1.vec1.fz6L9skG2Sq4YeAZej0OX3TozQ8-goI4AD1N6JRviC2eHNqLoVlLYko23coIz1G78TZPnULvFVp_lT2q372mv2GqSyHNKF8FstmzBA2w3ZH-f7LHh4Wj8YJ79Hlv8DEBBXXtlNlbtqYe5Akx96LLmlvA-CdaC5dJraeloN7NSyqLG2BJ2hVN_R8Fi3sCEZeENWolsPuo__I7f6Er_I_4sYFeOnWpv9BJ7YuvumJUE8WwYFKxDM4UkVW7Y5EN-fQ8ZN0f2hGFm0007pAy4gyW8TjQKlVeFP26io2RC_quubsCjx_fB-cRpbyLAVKyM_GX1WWOx25w3rs87R3PpZnQyHajTDBNsJdSzRp1I22FxaM6dsbcSE-ZW_fRw2so_UEwMT0iIeBekkH8Nz4VReWoj_Er3ftIIYE8jq3K6mN4FlXpUa7Mq2UvilynOEAMUXo8sNwFJLVq1MIVGAbdIL83_21x0AUtgmf4qVBCXFY",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": true,
@@ -56,7 +56,7 @@
                     "locale": "pl",
                     "email": "cat@example.com",
                     "challenge": "lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg",
-                    "feature": "sf_vectors",
+                    "game": "sf_vectors",
                     "iat": 1763289910,
                     "sdk": "php/1.0.0"
                 }
@@ -64,7 +64,7 @@
         },
         {
             "name": "earliest accepted (iat = now + 30)",
-            "ticket": "v1.vec1.neNd-g_Wf2WOXLjBTn-vopXqc7dlPGQvoxl3Z5YBGH8a4s5VdqMa0-GFDfZOMHvZuSxgfDf7E2KNcHTZT21PFUMjcn7zSWTzkU-YVevznGbiEDpFc0cQnCj77ifHJwi1Tl5kYfWKK6Fe0dvTcYcAIejk1WO-_yNpRW3M8MPZ9cIA3QJZ4PSh_cvwLlHNjprMzTL4NwDNk37PQ5RhM_A6BQmXag99HLlI1zYjqnw4sjdLj09tekXH5KPENZaaSsSgJNO2XwvYqwTmZIpwTjgLfx7z7SbyFHQJWT-vN3zhIsyJ5dI_vpjkBzhgZVV_P2MWaRRiFx4TQ6rOBXEnkd44xL9OCzmSfN8kDr9vVPcn7Tz8dlJ7a5XtvHnOAA2FueoTVAe9ntLsyOQe3-UtGUUBxBgr1Y1Wu8Nrz7yRE2hjZMFMIvhdGCkYm4x4w_u-4PEyd0aHqT6VeNiqqXxWns-XNvDKguSBfmgOOd2b2RWEFlk",
+            "ticket": "v1.vec1.XLyRctblAEsvNzyms23TP0YJwZqcaSRx1ASpl7OU-H4QzJMcGL1o-gWbQ4zhnQrQyq63tSGmmUx7CtbRLF75Fc6xhLuL8pzv8i-Ilbf4lyuxElhMyuba4uiT06rNuirA_Z54zTdR6Cc-zeN7IGpBZ1h_yw5g4bPfj3IhHOAdkObkKRRCO2szIlsL-H03PQxRm4XE-suIDYQqGjeF2Rn6_3psYcG3a9zcLdO4zdON-7j2E1cpgqHF13voBqoCq7EZGiUZH4N9aPJIupyIhOCZJVOhI9yxVF5M5zehNRdIpFV4OCLHnHVVH1zOLJf0DcFBpYEJ78J7ODTb66kOPnG-TrtUZT5q3XeT2_7M0t6jbVpWVsEete3ncw8sha2BF0VUteQdLKDJ50vQMq7l4QPBvn6U7UNmU79mkWOtzRv4OHJkdKs95uom4Nhe9iV0JGcbMqv9Mvet-tOZ4C8vNz8UPAHNmJ-IRXatn3v0sp4",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": true,
@@ -77,7 +77,7 @@
                     "locale": "pl",
                     "email": "cat@example.com",
                     "challenge": "lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg",
-                    "feature": "sf_vectors",
+                    "game": "sf_vectors",
                     "iat": 1763290030,
                     "sdk": "php/1.0.0"
                 }
@@ -85,7 +85,7 @@
         },
         {
             "name": "opaque member id, nulls",
-            "ticket": "v1.vec1.4b75gq740stPIt4eg6f-RpCU5AZ_41TPdsxhNG-3QjfLsTff5wp37ty5ekBzwiV892s9DuSHV0hr-8QoOGzdhr_u81edQLO4HBm1CkfI7fYWRfaDMrfSmL84c-XGPOcAa32I1TCY2Od8gyBkuhn38WkPlm1V7VLgqW-vIjgpT3ZeXaw45cJ0_C1XA9Y--FjHHU6PapjlcyvdhctTSySev6osuzO7k0sMgFjj7ociN2_6OwqlRFFiW0BIBrywkXarGc_VaqROFbqs_I8a9_DJ6yaHiT8NSH-iNqbDjN63wE-mm4wEgkh0WN2f6oa_rQENeQ0FvNZ3heuAxHzhE9tr-QCzEXOXi_7ZDDC_auMw8XnxHiYpQaxar0rmwbOLJQnekEMq2LI0OiDQbOv9AlfDQd3T2A-8NoSGPd4ccOz8gGzMCwQDku408jKhbrKsIxNTWvzhX6cJ-AtRZ75rOPvK4UYeqErgjK0p2HYYlh5T9oE",
+            "ticket": "v1.vec1.d3bqNLO8HNcXJ3aS6FzIwka_xBrWxgFsuJU2gneF-wsvPDAcY3gml4z61il5Swp15c36SqAShZo1WHv1Jo1X1fFEKlw-YWP0-3ecbOV46pU1cgqscOoMmQI3lK41YUqePrrtEkPHE9bW7dnY52U84dmJVoNkZexz_T2if00aYvJSuv44AUHoCLj3p9DPKw-oRij7lZ3E-7vMwdYBN6seBJ43agLyeoxQMuXhSKBwXj3_VN29Eo2d1vH3c8-aBkZCPLwzSBxaajSFO-D4UvvxBklApKY2Q4q3DWKVOfpa4gqqMdRHWWFJp6893MWu594PgpxuOagTju8uVRtX98GbxZwXSWhTWgfjvx4OlOnAXshK1ueg7448DXsPJt1MVQgfvElCGeEVOQfY-NwRxFUqru4PaQ5SbboFjMxAz-nkwSUZbJHqpGkV6wXC__xrhw68_Tfc1d-b1dSTddYgTvHvPsNpOqlFxu1xi-arY4U",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": true,
@@ -98,7 +98,7 @@
                     "locale": null,
                     "email": null,
                     "challenge": "lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg",
-                    "feature": "sf_vectors",
+                    "game": "sf_vectors",
                     "iat": 1763289995,
                     "sdk": "php/1.0.0"
                 }
@@ -106,7 +106,7 @@
         },
         {
             "name": "expired (iat = now - 91)",
-            "ticket": "v1.vec1.bHc597FPZ_cyb1oqputLkO2BcJ_OQm9anIPK7CAzjyL9IlO4wXWT6uvzUuqn-FagVtCnSxVJttKXRFAVziMYNJ9eRg9PuTfNqoOpvjsHyKGPLV7_zLcpgW9wseg2Ufx4VngdGlC2rvyTxJLZQQISu6pkEebI4KF6Reyz6NZ0w7sX0peovZuRvLUpQHWu9xZdnXFRKZV88At3FCFpOalXU42v384ZUxXEDmblR1vUXJ3oAH33K2vehMiIV2RJ7gg9HDuNg0694UsXZzFfD3Eexx6CncyAuKvyKIS0ACWwwCGmvx-odXN7Nkr1ezDumuHDFDfhJtNEUez3qqj_X19YZntNzU5vKxnPZeIfdtc8oVii-HKcehoGwW15vBSeW3C-tplTRZhEJha2rrRqEwwMyjn6s0N9ylL-rpzji-Pcswhmva_hwvB0eDoZWnEOFSsPCw6fbpmprtkZezETKOANbGcqTK96qJ0mUiytO1gFM5w",
+            "ticket": "v1.vec1.XtRl4ehCeCOHrppTkkMVtEcXO7RBvDgR1jwW2Hw0MhTryub1fcBhzVR9Xn1U6pv96f4ry6M0Myd_TTdmozBL22qNBmUtiWP1wSe4FVJFGv7oDrX1t0pz4GFsVjTTpi_09eHyZPlAMesZV_1EJEyFhQq7h64z9s3wi1lWtSz8md8cnJ2oM2X_tK96xY8BuS6VOOxokRq9qltHIOiFnBqkn2jB-bfMUtnf5quwFthYWtBl5Momkm0lHAdbDrPq4dn66Xx_QcHnZqrmHZ6aV5qROOJn-o8_OeaKZMU4hr76KJrdCTw-HvalfoomSIf8vcyfPJC3jOJbGg5hWvmSJ2bDSwI79eZzwKv7yxCuzDEG9e56hLsX5XnG4VCvM9BuHyXPg73MU1yV-mJDGKCJ4XNRpF-80Ua7VkhfAT3iqbNp8tM3_xzIw3QUQXpRXTs15i3GQhrRszxQqhbEjNoP34N5wj3caDDk6viQ9Qn5d2Y",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": false,
@@ -115,7 +115,7 @@
         },
         {
             "name": "not yet valid (iat = now + 31)",
-            "ticket": "v1.vec1.69EdzaLoXchBi669gRDxqKbbAMhfy1abo2cHBckA_RxGUr235u204wObHMsVJXhKvCynAGSLT_Z8GfRx7h_DQABLl2l3JR_T1MPfhSdWTZN5rlEmAplpB6H6Mo6thnZtqc-86fAWlKuPaNqO18h_1lE4s5fkfUC-YSP_3J4uoIUJVD4tWejTDxSoD51OgFICU0oZekPwTkMdlLL1QyE_7nzxIWyoHdIK4qMumVL-05NCn-11aV_am05mFoy1S7XHJ9KuZUA4wE3X_-osS4o2Ui8DuaJpomurty45aPLbZ7kL-b-m4sjhlbGzD_4LgN4DjUdiR1AdUFeoAMMvyekQcIEenm1E2s9q_o78ZJHrM7frevEjJmkQH6-FqsD2Xu_GRVCbgE26sDvH5dZuT4lagApDjMbFQXiGEYRmqTnyHevNBbp6MTow1zYQOTcUIZlC7fKfceroaihiWIEmDpvTOz09XZCtZm6uzrPGJpQomqA",
+            "ticket": "v1.vec1.jRCOQnHPnsZzkeaeUqwSFpmdC6xOpQ3U-CUkzjpH5kCA3EaXbV3OTBqI_QVxcrX7qLH408lKcRl02IlR11yA-R_j0yhGP1XEUwAWKP9bmrbPX5VscOEr8zFwWspNPAjrXtYC7pEVP37g0SFk8NXEQuWZYL2cmBcO-NeNQU5KPngygIlLa-kge4fmH1HfXxTY9Yumtt39D8YmhkAvVkPyZZ8bj-jLFaUdpSzOq741t85QJb-1G0n9S0LVQmY-a-RJ6PLd-6KFGyY7kB05w0t-SslwmeCiVT-tHhrSuc9A5i5-1FCbC6-xg14U8iZAzuFTp0Nr8HHBCtdwyYbmt0PY0x46Dni8Z-FWe3MJ_2NEJ5fVUGavYTn1HRS5tcfIegte8aQIhOCtLuNtD9AzulyyAMAQ5BgPJaSAku_Tc7Tlcm8q15Fznq4nqMzgKQh81nKm8Rzz2Oqt8HjylIrgNvWmOODy9o3OnTjkZIDXa3I",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": false,
@@ -123,17 +123,17 @@
             }
         },
         {
-            "name": "another feature",
-            "ticket": "v1.vec1.5q5XrjcCSJ7Mo1wN6ABUAaC3-g_4JeeNu3QauFkGNzxy3mwNQpFeEGOHSC_yIwcxuggjJUBAIIel0DUE1F8Qskxliui1vkUrJYD9bcrbKD6BR78LiI2mGhraAIH5-33olelJaHgj3LnurjRmu0s7_wS530m6Esmp2xt1G8edaMEyn3omPUqHhpEYTSSd7MiQ7uZscvfRC2IFoiLIV_lixMeAzTjQGVnuW_8orOy6J5KdBdm0mYnQCa0y2S06LF1qPRi61yOL7fdNVumXk1s0vRcT3xADt4HLnQoc-OOESlzlvlRApqdXZ6o5ldCM_dVJTf3rrCLCz9hyfgSL7nZ582TAPGZtjr7yTfhntAM3zE_mZSsEd-thUjqvjuG2sqEW34buvjxkKxRfNOwaSSNb10GUaJujZI6D2hvtRTk11eXuJmTqZEHmjUmbzBjkh42lnWeXVVTtEy8ZvWvR_hIMnvAaYYbC0o7W2_YdJC3xnGs",
+            "name": "another game",
+            "ticket": "v1.vec1.5BYrZCE3_htRZA2LNTNKQf1crLkmVN4uuEj_QCDUqjq2xYX8ElmwlZmPmF3ATWIMwnYbVu8eLCxp4sge1bwl73zflS0XE59nztJ4GY5rqA7U-zsDPgoZCkZuEYQImY9ZP3rGyzCRCl9kAwIVdSC7MXEdFUw7aZcSBVycXl5G9ziCkdrbAjHvBV2zf5bNb8q7Y0h498hWXhUXrfp8ofSBx_kOa7Nxe_fHxY2WyMkj0PEd1MdH0fc4lHBEtQqUiVX18VG3rDFoJYJdM8uqW1G8KQWzLgiOITkaXTxFS5YfBrO8VkpWThLshANZ7j9ke6VF0l0DUWOxFCf4fbfRIraD0Zylzlq1GiXNDzjWBvooWIiQ2ICubGgLDRyoj6pCVUauKct97AZJjpNhbK_W-kJ7SoauiVCNYbCNCl8ORY4J7nYlbopurKFX_JKRcyohAAhzE4LSM0_NMuoM1UIDgkyuHHHoTA6v3Wevcmv0hpc",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": false,
-                "reason": "wrong_feature"
+                "reason": "wrong_game"
             }
         },
         {
             "name": "another verifier",
-            "ticket": "v1.vec1.9ST8ogAoTRLwMUV51cNp9fhrQfrVRqm70Up42BTE0EgZSSfe6g9_58IEQiddj-ZOB2jsriFKKoyiTtujB_q54BYwhU6mh369CbD8n61pkwXO-pb4jFTqsxZKhI9s0tI5J8MUS-b_XbXzV1z_Q7b_6KVvBwptVp64b-MYeGiCyFsodeCEPYFu99-tqyML7aKB5d9yz50ePwvcv_r3eWdVDWx-z6ulLDzkz4eqwbTReCpHJsFrAd6_bzGyJHJt4JoGlgW6uJjudAFNjRyUqv7Ky99ErRzQo98ELyXgdMyPjym8m9wxzgo2EcA5sF-EcQOOx67l3-0DfrKiq_2X9qADViAxSi8hOK3z96iNFNAUnV5by8Jlk65PtcNjyJMlqPP6b64JeUqQ3DUIsivxGFbnYdmfw27ksmfs5EhkSMn_R34cByRKc0_kboWM6wZcdtC8mEvRV0cG1i76dJ0bmnebb6hjwIfqYk9eQ09OSJa1rP8",
+            "ticket": "v1.vec1.T6E6ZoIlxps7FjT9Mzg_dq4I_05zhB2n7xSbHOpfmQ1Af-3od_oqu2W2yaS_ccLFkOW6QQDDaiQwMXYhFUf0NB6rY25hFnidhXV8fVyzWQz2AeSPCqLi4g2luRZUwe3COBJOCdfFLR5eLd9zPftU3xK7tUL0E8qo-DwoNwnQuxG18nAwC-phMQ6x2pxmL512nGZ1ma2pVbMoNVCvkO8HSkg2RxS6xbo4UkcQqo1QGnhlAFQE9wbWk5S_z4ZQmybnXlhueGbvW1wjV5xJUxpaJAsjWE_2ZGGFwc3xOmKBzkrUBTAx5vjD6W-dV_HYbLuPtNKvxlYCCjQCKz6nfDTVGg3j4djW8ZFXrHRhGqo3-04X3b4kYz2kiPWZbaRMTlFGAjfCTux9GwcPiAHp9Gii1hwFBF8HV_WTxEhbeZhduoeVzYYDwtRIjxeTyIAhFT2tL1zJ0o0SBisHzFmV0B89jfrosT3Mti7cqapGxhU",
             "verifier": "9C3gdLE9NSR6pZ8MpO_MO2T8ax6mOjuLvwRBvG-m840",
             "expect": {
                 "ok": false,
@@ -142,7 +142,7 @@
         },
         {
             "name": "unknown Predoza key id",
-            "ticket": "v1.gone.81Nr45qGpXBU88gU8Mb2GUB3eUQqj2mclH2NU9krGHa3N-WzPUNZbUn4SsCjjGnxTrpIAxsWCv5AXllRaWl2GXRxacT40H5qOWHOhPN7uXMaoqeMNBdibEyU0vYCK5MZ0f9zsQ8F_aUZAICKZwnQkLTxCD6Uki4_8A5_LWIua6aRG-tZ_Sm0vm22v9cyuv3zwona4Cqk-fyllT_keFQ-5FCn45pL9b8ll_JQ0jXBsei9nv8qWgwVytThXJ5XWctDhWHUkxzXMXepvhuerfVSgva03kjyZjd8VOyWQiFpOJAcO7l3_yiaegyb538awSYXrheY9AbHWDrAlg-JgIYiaZGTEqAHlhyMFoP_QEyAAGqKRgoiV_5KNBT63j-eHE7q6Q3CREFDFlmZ7wkqXGgQ93Qa4Ca6TxI2AaZJrPMmbHCbEIoShb8SG2_V5wiI9eQINWJnBZELN3QwpJEw5QPWe9jdRnPwtyTWbGNBomDwcqQ",
+            "ticket": "v1.gone.KvHDhF0kfWkSdkyIBvBk3n2qytlgxFK0U1UfzeVKildsNgGgW9O7ZRd445A2TD6yjh1kF6LyMIVl_clWkT4x5Bu5r2lJc5lEY7lQmNpM_bOBTmM6FOonr2P4khg-iujT71FEEVrHz8YinpnUo8PiRcHLJPLNsB_NXkfMenxaBzu2Wcbln8M3u5g_SbBWWFjWPCH-GXFWlUqm6bTv7kGUH36z9wklLIZuOetuVKPW3UUnZ-0lO_ZmmR-Dl6EW89R8wueXUYbE7O8FeiSBiXZ66037dzrzFPDD-e9l0PvnmH45hqDgoh3BET4C3O0YFxp91Y67Hy3wDslTEPZoJz3GIu1V3hdubSpCae3UQOIz0TzaUZ2RypF0q_-7FtbyXveBVxe86n1azOM7JMqsmxXd5dzitX2PPgeJJwxhr-n5vNU6tYaS7Kqc2IgIc1qa5aNb0A0uUlC3_zv4g7_YH76ffYbIcmjRuAmBFqZkmkQ",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": false,
@@ -151,7 +151,7 @@
         },
         {
             "name": "sealed to another key",
-            "ticket": "v1.vec1.7MoN1erit6QeU-Pwel4-TIg_33TK5xKs6x8xYVF8giO1tOFct95-DPIwYTUMq11-N78nuGI-vjQPbmVyMdUnojwRM8LBWzunE1vHr1-ZuhQdYN2Qv3PwXStEMU6i9w8EhqHGiItvZeU9SmwvSDBaSQeAUSJRu7jqhBln5pqsQKrDmqalah-TPBf-w52P68XrTST_ehaxoVBdgAYjdZ3hDbf5JoHUswvrkOEUC9UdH_Hh-ZjJeVGSnroBlwvbt3oj48TbtbNpPq4SrRRjMa1b61ncqdimQi6tZZv8Ro-fHN9yCEtznJPpIweGwmFVTWasy2mFhXVMr9DGy8dR5wH7gipBMJHyxL1yKCsEZ4GbeCS4urJfDlAegTeNXbIFB1xbQFAWC-d8g9cVLkdDeYBiPPHg71ZttWtNAHcTMjliw0scdDpx7TLa0y30xcR73K5Ie4et8ad2rlj00yeKQSKJV4661EwiSI7V7ytMQDmHX1M",
+            "ticket": "v1.vec1.L_B1ZojGM5yhA92igxnO6MQMpg08K7pKbHl2JBvmJhmt1badqOGPl1j1CNuY2brDbqSE2UMAZhZNRQZfb9sr0ZI3drHi5s1BoBwfmwvA7IxoYspW118N2TFapNBKExWy-wfS24pV_gR1vdStKkVZCZW-X8dOvx2qSTbMkhoQa-BvnT8sTRrkUJjccCLz4Ri9eGvv9ftPZDLeLcIPVFFZbeSQw7JDd4yqyvYNaREdmyMV-rk7nP-11zfC0FQ7N-18ByaJZ9Au2hzHrSFEmP6vGSMDEgkinq2vhSw4rgrb8K9CRG90VZE9a79PFQnhXoJoLD2d9-q_V0Yna1Yewfm0wGimnRSEJhCs8Hy_vjkaFN76pjWNhFNRVDYIOoVge5qma67OydCsC63BXMSEqy5m2VKkc5dnlIkYKQAHantQApKM2ufHuNOUBfr9kZLolL6tPRbOe5bIweaqTjO-pYaR4Xpk7VfJ1Gan076-028",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": false,
@@ -160,7 +160,7 @@
         },
         {
             "name": "one character changed",
-            "ticket": "v1.vec1.o5JaYeln71iJP2c9UNw1JmmdAO-rA4ghFnEDsPrIBFWdm6PI3bQEAWV9qqU4eRUQ6T1JZRzsbFDQIKu55QUvpjJcyLMvAKgnhhEpKWFek5hAuevzpPlwgHdKoR57sfbd51eOsoEHMlUhGslaPEiOmpcTaowCn6SXx-u7YVsORMvFHemO-sYaQmXeFcg3NH19Xt7bvSAKE0i1SBpYRqi8WtxJWEp3QfyBpfl2dIedH3kRUgDfbddAracWBFnnBbIHQ5vzUQBxSkibU2Hc3PSfGN8fMYhCGz7wK_y7zUPDIcxjtwZXzEsT-IqmTg5OEixQ1-9bnJ5zyur9T7743csLZsRkOPCjKD2hcQFpmt2b6CHMmuFk5zMKK7TY_3sQMVwHh06NOlsIEVdEK7ykY6hIoY4d-Haz4UFFUoNliGTVxQCrW3p65W-gV4sINIev2QC4r3pJyxjYN2edpo_IQz96FQ65ymZ-iRdIhxDwJbSGVhE",
+            "ticket": "v1.vec1.PTpzpXjlguAj672d_22ADqpFTh7eeErOmdITeULP-15Y765Aawy6TlJtutO8QpOd6u_i_xhEgAUYw9B8zi7eQF6mG16bUXPL7HvE1szLJvhpSMBxstcGPV_hVE4Kg-9--utsmUu0ehCb-OKh2fCym9UvUn68l0r_DK-diokPoUVRO1IMs2IvM4zYXtECvawRsFK1Rp-fvMRZxnK5dWVvPv2rVerd9-8chdvCdmhW34RGfroAyS_28gkTcXdWq1Q4n_Ic6DKDM6oI-GfnpOoEgw-GPttpb70AmO4lSTrn86Z8KU6NvDTWjB1hC9LQPBv6yLDCMDKXBSa3oOweYyf_wY9yOKf9469GAFKcaflLWnM7sXZLUCl4Tsq8KMprv2wUrdchVHT4iGEMSTJvint6tTKDa_vRHUZaGvgQDV_vRtsL0gMftSjrGGoqfgiOwbgvvT10akV39UVHEx7ROizJXK1ASGHKfSkW_OUu2Ro",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": false,
@@ -169,7 +169,7 @@
         },
         {
             "name": "signed by another key, naming the site key",
-            "ticket": "v1.vec1.tc8Gs9Y770Ulke3wbYYMkEzVnK2LCo3qlWYCMEMtBlUqPPwHXzcN5D0-EnnS9RRnhdHnJlkj7JIOsnCaSZ4sePVYVK6SDFsRFANRpUiuWYeJWyTsigwB6E7_avq7VrSR_DXHC3Ffsazk2eD5S-WqoKQhRM08LykIpSVlW8ngQKgHpF36yPm8arreLwjp_YZ0IcTfRXWMSzpjXYEsNowxyT0f9Fp1R7nzc13WvATXiR6z1vr0PFqBKksnnL_J8uSAFJofKENaLtKWiqK7Vjoj71UKWWSAyFD2oxb9D8Zs1Nofnzijtjvdr2V-r_UaLVqIRpCzVf5xu5WH481Al_ZXXGh0733UCjm_Ge6sp1RqIDs_xbSX4Rw1dnC-p0ejOMGa4k6SJLD_Gx2gnDH_R6sJOKr9hP0o-krpFSTyXO1P6tFfL9RvTExG64h6wgv1mOLnCwNS_ROWakxN6ZWhi6-N7CDtBgWoeQbfVyVHxZ8N5kQ",
+            "ticket": "v1.vec1.GbWg6737FNn7THKi0Y0u7OLBgB3xzcGZbIRl2c5lWwxcpxN6VUM81VHVpTTzE2O7D216RXqg6eZ90Q1RsUMAVJgLQQV6rIESs5m73-UwET73mVhiwD6LC_qJtwMsG4KOCGWiC_Osn6B6M8-OwhFefBo0mHvr1ps7VvmV7Clgx_5FkADxVklnpN5oA-z8ZcYBNEpSNEqln80J5D85SV-Q9HPfplMxmNxDagb-3X9Fh49G88kTaXB-9NMGkEDGjPOE8KoEgCj5zXHQ7ec2S-U0xkcTWlEGBOAqlpkYoOclJU2j1nWiM3VhLsgj_ngOFjWgMb1QB2vHcRZpOv00SHTF2s8KdDmhDM02fuOV8IHjWvEFTIEZQBPYCj9Y9YdruIwJ6U4RxfVTlJnZFzZi66rpN2-sEoATMJUgW3W6vz2AdJQ2AztOXBniiLYx8KcMkoUSoOB_pVPiMhGh_uT8bG-nx47ojMmPqh8Ts7fQloQ",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": false,
@@ -178,7 +178,7 @@
         },
         {
             "name": "signed by a key Predoza does not know",
-            "ticket": "v1.vec1.PrIEbpG1Z3yudtl6Q6eIgwBeOoFhgrfYHBKMGxxwFDToyuVe2BbG86QjpoeNKPLJVYfoW5PV-L9UL-aWkuwauxZ2L5LlMwJgTv_riIVvM844BWl5X_r7y2z33kRH6nkaal0LsWDfcB0h7HMtIZvXcSuFghld0fWH0LdgMOwGTaxCUHPeFBvfAM3R2bOz-1kGAu4_Nk142jsC19bAuqJKRRvlVhx_x6N7d6ApVdhhvWbSkUa3qs0HyOmWWtUfzACdpca0CqVU8NO1p2IjAgBohi6btJ4BTWpl3NMoJVa-LeneIHld-LhcO2AqFAIXGPurhaAPAszlDmy_Vtp26NMPmCcOtPZmGJ3Fpw8siMkz_0wc9dZjoYjsCY2Ti0_VFTTGpyGrrhEWStCdjg9ZCESa-vB71CTtmOJ6mbX0hQ0kANuXBsM1rVlK9Y49_EWvtqna3gIGTM-1SruCaQc80D4FNP8qgNZ0LvQJ5yRib3jMKXc",
+            "ticket": "v1.vec1.IH5hKFNCqM_cUoVDVFr4WqpoEnxTGvCCstEV265w6BgcF9Fv9yC_ull9sZzPlV6dS-BjHuyKuqmru83zWkfOu3fPI72Rc2QHkCj4EGvDS3YVMxOXnKQyOHaxtfVfVTwyoJe3o7kxItmqc-onHUHXpn5oQdpLzRSo2CzZqD6i9WSxVxs3i1pJi4lkGKwQctw3A1gdXn2VIOWMxdRU1Y1nvNIP2tCuXru8Zddu5iVUQ0t5RLnxv22vOzxxf6KOHrJsP3bZC1e2hPGy6DlxnFr7_VOdAzIRmvrmzC9q3kkq1QYlseTZIbq_B_XdWHXyHH_W5AAWtERu-MrmH_nAJl1-1MuE8oQnOzPClVaVrKw57nB8ZYtLO-vybv09B_FJel3WWCJX0yNdIgINsxP4Gd1EhdT3VNTgk27FMRX_h-z-UI_I2c_yKgep_3_c3JuRzc8pejVkh01CZPJJMAftlWyUgFxqZw2bnnviLGjhlMw",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": false,
@@ -187,7 +187,7 @@
         },
         {
             "name": "claims of another version",
-            "ticket": "v1.vec1.9914bmnJAuMviagT8Gmzwht5wWnAZSRC4k0QzBRDOS3OsVr0ZPvGuNq4RxrYVWic8Aq8FRa8NAuSHtxiHbQLHgW5xSnFTtOhbPiHjKe0TkQBbfiHzvu4wj2xfRRWVdpEdCos9yJSEfGjMDyfJeUfK2nINbY--2lCVt488dhfj5Xik3KUeYxivQZvsLT2tp1Bs4VMtwrb5rWbnoy0TI4wdrwsbECyanC9_DMZz4oar49hxES7EyknkV4JJF0Un6cwwL6nIMJcPoXdbhf7ZyplWdXpiopKlFyKEcPifJrKWvo9s14qWXoX0o1svT--JXM7hbZJ6gyB_8Z1E7bS_g-7b79I_oYdzjz6mw7KVyTdmGG5NsxJdumZRjQ8mNp9LNo9QMY93gZz-tDEVp5Zkg28N8zmnXEoa3PnsG6HRAvtFmfHkNjhkmlnksEgNu4JqMgz0KZ7tbyZzQwyEr3RHGCVSqL902DP9iOSTyKSe9YlpCk",
+            "ticket": "v1.vec1.9xvAl-3Fue8EneoR5U-7PoHu9zbnydv4h2EgYH2g0nOdp-zvBL6ujhqX0koDTK_QokRQ8YSRPm1KSRsZESqLISZugMxDUzEhkm2fVfTmovtQehcJvAKlsFihzZybyXByYU3DYRFxWEjtXIc6rWqwLPeQcj9DztKMRFSBHtOgT3WYpGUT4rq1AG8BJbJv_e10KTvTkw7sBhoYYUJO4W9_Hu-y7sFdzfWOqq_LD-Coxm2oEuNC5Mx8Z4YrZdyKVDfQ7iCq9vQFeyr1htrIsh2TpkXWLPa2PgfYDgJWdh-BBmsz0E8RBgA_xnPtsWTkMqE0aL2Otcnc_7-mfBQ-1NMr33XsRG2AYWzh3ETFRSse3enbHX1zz1E1FHnwdDTmo4UGWLIBeAA3TcRXTyR974EonlmwpPbeI8kdvSUpm826pKoY6qjLS5E1bVNMf2ZSTnJskakg2-_HhWG8iLvGkkBvIgk9w5KCrOx422hBOZc",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": false,
@@ -196,7 +196,7 @@
         },
         {
             "name": "member id with a colon",
-            "ticket": "v1.vec1._aKZZtbE-KVLdRcanbWhakbX1S3n9e4g6jEaJdnzC34Afgwj2Q8sb7PomkxeLEErgkjKV9tMvtOXtSzg9A1IsbPkET4WVkoXMaapdVld2eJyahRNF46bgE7QT_0x0U8N4xXkYlUsu3cz0dsWZ70-OZy-bqdkv9eHkZOSMOaw4b_uJyBmIffPq8HZfv7aALGY00qvJHTiTzMgMcfAulB-QDsBZ7UuZxG11dqGWbOHF11qGYp0VkkNaWiKjE-DETh8Hg2iQPUuxvi7n8FA5HZXa3cuQ9mjKEfJnUn4pHIgo6akHJjcaVpCKCedhQDWeothO-SE_vqsqTLtHXAdkWSihuoLRj97bpEijnpxdPGMp7SgOSNIZLhK3CFNBRxUfD5ErOArW5PDwoEl1ILXJjDvm8eghi6q5spzABe4yhelc7QxA61WNUqTclpJb9JI5k418uA2lhCQO00p5_fp8RfO9Yz0cc5wI2V3Hng13DLLWGnAavRzG3VR-gw17ZdR6o_5",
+            "ticket": "v1.vec1.eWeQzWZY77eaUbiinTMBmLxGCwxywn6Rerg_tJ_HtUuQx6tdiXnhLnCUNOubYYPf9_A76gvJLwXRev34IFFc5hHc3YnZXlY5pBtao2QC0HGCnl_uVaN-UMvOeUz4MwU86LllB5q4FWI2zbg5AM3BE6-bthgYg4FvZmk1udhpATJsLIM830FM6L2_WfjIiX885X6vsZPRCsCuQnlONcGCJQID6XaS_LAYl5MRxQGzTPFdcplBioDUPxIVR9Rj96HzwBJJYHTkkUeOjqwgKPmeNB_5aPVnIr0_lpb2xgPDq0In2Q3flQap3lebc8K3GfwA3B5WoeywklUEiLdSOyvHjJ2DSCcVtA1xaOu8soKpdoYR8Rb5l9j-ta8qXQaNahrcPcOiZp-yxd6MJhRLGm1_Drql8EAp7OSZo6tNw8UTGzLQpo9QRQdSdQGaAFAXpUqoK4TWhz70z5BpgxWHKZd-FBl1tXLtX6H5wi3Qjrne0xrP7qWCbU6rJYgYMwtE",
             "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
             "expect": {
                 "ok": false,
@@ -241,7 +241,7 @@
         },
         {
             "name": "a sign-in ticket sent to check",
-            "ticket": "v1.vec1._hIbLy1FlcEUpN8kcZfcrvSXc080udN3Cg6a7_z74WRVLjkNP1Da2b6Hg2sPMRxYDaGTTDSngYJ1lw5oiXC36BRgX_ZZYGWOU0tXR5eXJmmKAjmZPL-vx2wMhHQuThy3rkKTl9mYFH9zrTgp4zs5ZDaWsqwvi_EtqODashiKhOAd-Idlfef6b18Neb3vk-XwAbtUriKqMGdZ4zgUILJwDL8sWGXf4bPscEzLjXLf_ADgX3dI0C-5JCz4X1OMPYhUwXBYemRCfRVJAyimf77LN2AS9Ch34gPXZPK4J9nwqKtmHFn57SB6mGqCn-38cZhghDTJWIfJ2Bpvx2MsVAupDVZfH0W9yjA-erMI6ejQVH1sJdpNwGD14AH4xHvABO7EzoQGDfbARSG3rYcBmqW1SjAQ5DAw_XRv8KzlLeHUrrW9rln9CBOfJDuUBg0WZI1yzemzq35JfdvvfEv391TP5bQ_w3S6q0bQTxcIDw0Ys40",
+            "ticket": "v1.vec1.aR1EqWLWAAAxwjQy6r8yQilccsH8XMWSvhn_UXjbJiqj2na9pMus5-OD60KcruKuH2RUdu2imtCwZhQCUlqX3YGvFbhgGRRR2qQ4Kgcu4MpdWKv76agg1UDLOoIrGe5sg7yhIlZCBOV5zL1g2jA2AGvZ6Gexn0vF9Z7sBqLmy835qd_rNwsKBlDSles7FJaIvXhsmWedbsaT9bKfGZzTgAbjzJ3Dghi74QVYDiPw3aCcK6HzKMcT3r3LcSkHufWBIEwX9fN9dkflzLkzYQZ-1doSOpQRPG3MSmI5sGNmiAQwooZCgba6ta-3hSwIO-AuG7GrCWmuwonq0GI75C7S1hElO3j4i_N9OoO2XsKdO_qj56c9_ZWFjZq5_IBRbGyjmkCYoecRoG8Mp8QdZ9XV_VDhazUl7GJjGxtlQ21zsx1TUtn3t1jB0eMSu49a5LX7uT3Why0brwUHG0VKwWpcWsliRvQnq8zZ25lDWOw",
             "expect": {
                 "ok": false,
                 "reason": "malformed"
@@ -249,7 +249,7 @@
         }
     ],
     "replay": {
-        "ticket": "v1.vec1.9ST8ogAoTRLwMUV51cNp9fhrQfrVRqm70Up42BTE0EgZSSfe6g9_58IEQiddj-ZOB2jsriFKKoyiTtujB_q54BYwhU6mh369CbD8n61pkwXO-pb4jFTqsxZKhI9s0tI5J8MUS-b_XbXzV1z_Q7b_6KVvBwptVp64b-MYeGiCyFsodeCEPYFu99-tqyML7aKB5d9yz50ePwvcv_r3eWdVDWx-z6ulLDzkz4eqwbTReCpHJsFrAd6_bzGyJHJt4JoGlgW6uJjudAFNjRyUqv7Ky99ErRzQo98ELyXgdMyPjym8m9wxzgo2EcA5sF-EcQOOx67l3-0DfrKiq_2X9qADViAxSi8hOK3z96iNFNAUnV5by8Jlk65PtcNjyJMlqPP6b64JeUqQ3DUIsivxGFbnYdmfw27ksmfs5EhkSMn_R34cByRKc0_kboWM6wZcdtC8mEvRV0cG1i76dJ0bmnebb6hjwIfqYk9eQ09OSJa1rP8",
+        "ticket": "v1.vec1.T6E6ZoIlxps7FjT9Mzg_dq4I_05zhB2n7xSbHOpfmQ1Af-3od_oqu2W2yaS_ccLFkOW6QQDDaiQwMXYhFUf0NB6rY25hFnidhXV8fVyzWQz2AeSPCqLi4g2luRZUwe3COBJOCdfFLR5eLd9zPftU3xK7tUL0E8qo-DwoNwnQuxG18nAwC-phMQ6x2pxmL512nGZ1ma2pVbMoNVCvkO8HSkg2RxS6xbo4UkcQqo1QGnhlAFQE9wbWk5S_z4ZQmybnXlhueGbvW1wjV5xJUxpaJAsjWE_2ZGGFwc3xOmKBzkrUBTAx5vjD6W-dV_HYbLuPtNKvxlYCCjQCKz6nfDTVGg3j4djW8ZFXrHRhGqo3-04X3b4kYz2kiPWZbaRMTlFGAjfCTux9GwcPiAHp9Gii1hwFBF8HV_WTxEhbeZhduoeVzYYDwtRIjxeTyIAhFT2tL1zJ0o0SBisHzFmV0B89jfrosT3Mti7cqapGxhU",
         "verifier": "99Xbt3unMwYwxKyRU3obzBSFMYeDSHRz_Dp2bqCM7BU",
         "expect": [
             "ok",
@@ -266,7 +266,7 @@
                 "Sec-Fetch-Site": "same-origin",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf_vectors\"}",
             "member": true,
             "expect_status": 200
         },
@@ -279,7 +279,7 @@
                 "Sec-Fetch-Site": "same-origin",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf_vectors\"}",
             "member": false,
             "expect_status": 204
         },
@@ -291,7 +291,7 @@
                 "Origin": "https://www.example.com",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf_vectors\"}",
             "member": true,
             "expect_status": 200
         },
@@ -316,7 +316,7 @@
                 "Origin": "https://www.example.com",
                 "Sec-Fetch-Site": "same-origin"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf_vectors\"}",
             "member": true,
             "expect_status": 403
         },
@@ -329,7 +329,7 @@
                 "Sec-Fetch-Site": "same-origin",
                 "X-Predoza-Handoff": "true"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf_vectors\"}",
             "member": true,
             "expect_status": 403
         },
@@ -341,7 +341,7 @@
                 "Sec-Fetch-Site": "same-origin",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf_vectors\"}",
             "member": true,
             "expect_status": 403
         },
@@ -354,7 +354,7 @@
                 "Sec-Fetch-Site": "cross-site",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf_vectors\"}",
             "member": true,
             "expect_status": 403
         },
@@ -367,7 +367,7 @@
                 "Sec-Fetch-Site": "same-site",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf_vectors\"}",
             "member": true,
             "expect_status": 403
         },
@@ -380,7 +380,7 @@
                 "Sec-Fetch-Site": "same-site",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf_vectors\"}",
             "member": true,
             "expect_status": 403
         },
@@ -393,7 +393,7 @@
                 "Sec-Fetch-Site": "same-origin",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf_vectors\"}",
             "member": true,
             "expect_status": 403
         },
@@ -406,7 +406,7 @@
                 "Sec-Fetch-Site": "same-origin",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "challenge=lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg&feature=sf_vectors",
+            "body": "challenge=lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg&game=sf_vectors",
             "member": true,
             "expect_status": 415
         },
@@ -419,7 +419,7 @@
                 "Sec-Fetch-Site": "same-origin",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf_vectors\"}",
             "member": true,
             "expect_status": 200
         },
@@ -445,12 +445,12 @@
                 "Sec-Fetch-Site": "same-origin",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "{\"challenge\":\"ZzvUi_lUAuHo_aj5YR-fct2LhNrHqD7zJav2j6V238\",\"feature\":\"sf_vectors\"}",
+            "body": "{\"challenge\":\"ZzvUi_lUAuHo_aj5YR-fct2LhNrHqD7zJav2j6V238\",\"game\":\"sf_vectors\"}",
             "member": true,
             "expect_status": 400
         },
         {
-            "name": "feature with a slash",
+            "name": "game with a slash",
             "method": "POST",
             "headers": {
                 "Content-Type": "application/json",
@@ -458,7 +458,7 @@
                 "Sec-Fetch-Site": "same-origin",
                 "X-Predoza-Handoff": "1"
             },
-            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"feature\":\"sf\\/x\"}",
+            "body": "{\"challenge\":\"lHp8QJgqXSI3_GHIPDZoz5OuTN8rh_hwCFdWR7GuVCg\",\"game\":\"sf\\/x\"}",
             "member": true,
             "expect_status": 400
         },

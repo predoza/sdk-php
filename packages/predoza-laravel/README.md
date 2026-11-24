@@ -120,12 +120,12 @@ Behind a load balancer or proxy, configure trusted proxies so the request has yo
 ## Embed the game
 
 ```blade
-<x-predoza-game feature="sf_CDSofyqv" />
+<x-predoza-game game="sf_CDSofyqv" />
 ```
 
 | Attribute | Description |
 |---|---|
-| `feature` | Required. The game's id from the Predoza client panel. |
+| `game` | Required. The game's id from the Predoza client panel. |
 | `lang` | The game's language. Defaults to the app's locale; the game then hides its own language switcher. |
 | `title` | The game frame's title, for screen readers. |
 | `theme` | `light`, `dark` or `auto`. |
